@@ -13,9 +13,9 @@ RSpec.describe Cat, type: :model do
 
   it 'Is not valid without a name' do
     cat = Cat.create(
-      age:5,
-      enjoys:"Enjoys chasing mice",
-      image:"Img-Url"
+      age: 5,
+      enjoys: "Enjoys chasing mice",
+      image: "Img-Url"
     )
     expect(cat).not_to be_valid
     expect(cat.errors[:name].first).to eq("can't be blank")
@@ -23,9 +23,9 @@ RSpec.describe Cat, type: :model do
 
   it 'Is not valid without a age' do
     cat = Cat.create(
-      name:"Meowsciles",
-      enjoys:"Enjoys chasing mice",
-      image:"Img-Url"
+      name: "Meowsciles",
+      enjoys: "Enjoys chasing mice",
+      image: "Img-Url"
     )
     expect(cat).not_to be_valid
     expect(cat.errors[:age].first).to eq("can't be blank")
@@ -33,9 +33,9 @@ RSpec.describe Cat, type: :model do
 
   it 'Is not valid without a enjoys' do
     cat = Cat.create(
-      age:5,
-      name:"Meowsciles",
-      image:"Img-Url"
+      age: 5,
+      name: "Meowsciles",
+      image: "Img-Url"
     )
     expect(cat).not_to be_valid
     expect(cat.errors[:enjoys].first).to eq("can't be blank")
@@ -43,9 +43,9 @@ RSpec.describe Cat, type: :model do
 
   it 'Is not valid without a image' do
     cat = Cat.create(
-      age:5,
-      enjoys:"Enjoys chasing mice",
-      name:"Meowsciles",
+      age: 5,
+      enjoys: "Enjoys chasing mice",
+      name: "Meowsciles",
     )
     expect(cat).not_to be_valid
     expect(cat.errors[:image].first).to eq("can't be blank")
@@ -53,10 +53,10 @@ RSpec.describe Cat, type: :model do
   
   it 'Enjoys must be more tha 10 characters long.' do
     cat = Cat.create(
-      age:9,
-      enjoys:"fish",
-      name:"Tom",
-      image:"Img Url"
+      age: 9,
+      enjoys: "fish",
+      name: "Tom",
+      image: "Img Url"
     )
     expect(cat).not_to be_valid
     expect(cat.errors[:enjoys].first).to eq("is too short (minimum is 10 characters)")

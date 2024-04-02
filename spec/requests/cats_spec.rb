@@ -107,18 +107,4 @@ RSpec.describe 'Cats', type: :request do
     end
   end
 
-  # it "doesn't create a cat without a name" do
-  #   cat_params = {
-  #     cat: {
-  #       age: 2,
-  #       enjoys: 'walking in the park',
-  #       image: 'https://media.istockphoto.com/id/1290233518/photo/ginger-cat-portrait.webp?b=1&s=170667a&w=0&k=20&c=D2ObzKSLDeuKyD5as2m_4UcdaPimE_uosgqWhVdt5n0='
-  #     }
-  #   }
-
-  #   post '/cats', params: cat_params
-  #   expect(response.status).to eq 422
-  #   json = JSON.parse(response.body)
-  #   expect(json['name'].first).to include "can't be blank"
-  # end
 end
